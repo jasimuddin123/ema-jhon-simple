@@ -2,6 +2,7 @@ import React from 'react';
 import fakeData from '../../fakeData';
 import {useState} from 'react';
 import './Shop.css';
+import Product from '../Product/Product';
 
 const Shop = () => {
     const first10 = fakeData.slice(0,10);
@@ -11,13 +12,9 @@ const Shop = () => {
         <div className="shop-container">
 
             <div className="product-container">
-           
-            <ul>
                 {
-                    products.map(product => <li>{product.name}</li>)
+                    products.map(pd => <Product product={pd}></Product>)
                 }
-            </ul>
-
             </div>
                 <div className="cart-container">
                     <h3>This is Cart</h3>
